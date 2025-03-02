@@ -24,14 +24,22 @@ const mod = __turbopack_context__.x("fs", () => require("fs"));
 
 module.exports = mod;
 }}),
-"[project]/postcss.config.mjs [postcss] (ecmascript)": (function(__turbopack_context__) {
+"[project]/apps/frontend/postcss.config.mjs [postcss] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
 
-var { g: global, d: __dirname, m: module, e: exports } = __turbopack_context__;
+var { g: global, d: __dirname } = __turbopack_context__;
 {
-const e = new Error("Could not parse module '[project]/postcss.config.mjs'");
-e.code = 'MODULE_UNPARSEABLE';
-throw e;}}),
-"[project]/postcss.config.mjs/transform.ts { CONFIG => \"[project]/postcss.config.mjs [postcss] (ecmascript)\" } [postcss] (ecmascript)": ((__turbopack_context__) => {
+__turbopack_context__.s({
+    "default": (()=>__TURBOPACK__default__export__)
+});
+const config = {
+    plugins: [
+        "@tailwindcss/postcss"
+    ]
+};
+const __TURBOPACK__default__export__ = config;
+}}),
+"[project]/apps/frontend/postcss.config.mjs/transform.ts { CONFIG => \"[project]/apps/frontend/postcss.config.mjs [postcss] (ecmascript)\" } [postcss] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
 var { g: global, d: __dirname } = __turbopack_context__;
@@ -43,7 +51,7 @@ __turbopack_context__.s({
 // @ts-ignore
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$postcss$2f$lib$2f$postcss$2e$mjs__$5b$postcss$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/postcss/lib/postcss.mjs [postcss] (ecmascript)");
 // @ts-ignore
-var __TURBOPACK__imported__module__$5b$project$5d2f$postcss$2e$config$2e$mjs__$5b$postcss$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/postcss.config.mjs [postcss] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$frontend$2f$postcss$2e$config$2e$mjs__$5b$postcss$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/apps/frontend/postcss.config.mjs [postcss] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/path [external] (path, cjs)");
 ;
 ;
@@ -58,7 +66,7 @@ function toPath(file) {
 }
 let processor;
 const init = async (ipc)=>{
-    let config = __TURBOPACK__imported__module__$5b$project$5d2f$postcss$2e$config$2e$mjs__$5b$postcss$5d$__$28$ecmascript$29$__["default"];
+    let config = __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$frontend$2f$postcss$2e$config$2e$mjs__$5b$postcss$5d$__$28$ecmascript$29$__["default"];
     if (typeof config === "function") {
         config = await config({
             env: "development"
@@ -162,4 +170,4 @@ async function transform(ipc, cssContent, name, sourceMap) {
 
 };
 
-//# sourceMappingURL=%5Broot%20of%20the%20server%5D__05f88b00._.js.map
+//# sourceMappingURL=%5Broot%20of%20the%20server%5D__82c90954._.js.map
