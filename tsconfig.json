@@ -22,6 +22,6 @@
       "@/*": ["./apps/frontend/src/*"]
     }
   },
-  "include": ["apps/frontend/next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["apps/frontend/next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "apps/backend/polls/templates/polls/index.jsx"],
   "exclude": ["node_modules"]
 }

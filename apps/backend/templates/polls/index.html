@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Django Static Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg fixed top-0 w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold">My Django Site</h1>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="hover:text-blue-500">Home</a></li>
+                <li><a href="#" class="hover:text-blue-500">Features</a></li>
+                <li><a href="#" class="hover:text-blue-500">About</a></li>
+                <li><a href="#" class="hover:text-blue-500">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-xl">&#9776;</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center">
+        <div>
+            <h2 class="text-5xl font-bold">Welcome to My Django Project</h2>
+            <p class="text-lg mt-4">Building modern UIs with Django templates</p>
+            <button onclick="openModal()" class="mt-6 px-6 py-2 bg-white text-blue-600 font-semibold rounded-md">Learn More</button>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="container mx-auto py-16 px-4">
+        <h3 class="text-3xl font-bold text-center">Features</h3>
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h4 class="font-bold text-xl">Fast & Efficient</h4>
+                <p class="mt-2 text-gray-600">Optimized static content delivery.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h4 class="font-bold text-xl">Modern UI</h4>
+                <p class="mt-2 text-gray-600">Styled with Tailwind CSS.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h4 class="font-bold text-xl">Fully Responsive</h4>
+                <p class="mt-2 text-gray-600">Works on all devices seamlessly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Example -->
+    <section class="container mx-auto py-16 px-4">
+        <h3 class="text-3xl font-bold text-center">Contact Us</h3>
+        <form class="bg-white p-6 rounded-lg shadow-md mt-8 max-w-lg mx-auto">
+            <label class="block font-semibold">Name:</label>
+            <input type="text" class="w-full p-2 border rounded-md mt-1">
+            
+            <label class="block font-semibold mt-4">Email:</label>
+            <input type="email" class="w-full p-2 border rounded-md mt-1">
+            
+            <label class="block font-semibold mt-4">Message:</label>
+            <textarea class="w-full p-2 border rounded-md mt-1"></textarea>
+            
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md">Send</button>
+        </form>
+    </section>
+
+    <!-- FAQ Section with Accordion -->
+    <section class="container mx-auto py-16 px-4">
+        <h3 class="text-3xl font-bold text-center">Frequently Asked Questions</h3>
+        <div class="max-w-lg mx-auto mt-8">
+            <button class="accordion font-bold w-full text-left p-4 bg-white border rounded-md">
+                What is Django?
+            </button>
+            <div class="panel p-4 bg-gray-100 hidden">Django is a Python-based web framework for rapid development.</div>
+
+            <button class="accordion font-bold w-full text-left p-4 bg-white border rounded-md mt-2">
+                Why use Django templates?
+            </button>
+            <div class="panel p-4 bg-gray-100 hidden">Django templates help render dynamic content easily.</div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <h2 class="text-xl font-bold">More About This Site</h2>
+            <p class="mt-2">This is a fully static Django template-based UI showcase.</p>
+            <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-16">
+        <p>&copy; 2024 My Django Project. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Modal and Accordion -->
+    <script>
+        function openModal() {
+            document.getElementById("modal").classList.remove("hidden");
+        }
+        function closeModal() {
+            document.getElementById("modal").classList.add("hidden");
+        }
+
+        document.querySelectorAll(".accordion").forEach(button => {
+            button.addEventListener("click", () => {
+                button.nextElementSibling.classList.toggle("hidden");
+            });
+        });
+    </script>
+</body>
+</html>
